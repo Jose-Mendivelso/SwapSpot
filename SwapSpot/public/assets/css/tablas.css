@@ -1,0 +1,161 @@
+.table-styled {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 1000px;
+  overflow-x: auto; /* Permitir desplazamiento horizontal en pantallas pequeñas */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #0000000a;
+}
+
+tbody tr:hover {
+  background-color: #e8f6f3;
+}
+
+.b-update {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #48BBA2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.b-update:hover {
+  background-color: #3aa288;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.b-update:active {
+  background-color: #329a7e;
+}
+
+/* MEDIA QUERIES: Adaptar el diseño para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  header .Logo {
+      font-size: 1.5rem; /* Reducir tamaño de logo en pantallas más pequeñas */
+  }
+
+  .table-styled {
+      padding: 10px;
+      width: 95%; /* Hacer la tabla más ajustada */
+  }
+
+  table th, table td {
+      padding: 8px;
+      font-size: 0.9rem; /* Reducir el tamaño de texto en la tabla */
+  }
+
+  .b-update {
+      width: 100%; /* Botón se expande a todo el ancho en pantallas pequeñas */
+      font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header .Logo {
+      font-size: 1.2rem; /* Reducir aún más el logo */
+  }
+
+  table th, table td {
+      font-size: 0.8rem; /* Texto más pequeño para pantallas muy pequeñas */
+  }
+
+  table thead tr {
+      display:none;
+  }
+
+  table tbody td {
+      display: block;
+      width: 100%;
+      text-align: right;
+      padding: 10px 5px;
+      position: relative;
+      border-bottom: 1px solid #ddd;
+      background-color: #e8f6f3;
+  }
+
+  table tbody td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 10px;
+      font-weight: bold;
+      text-align: left;
+      
+  }
+
+  .b-update {
+      font-size: 0.8rem;
+  }
+  .Activar{
+    background-color: #329a7e86;
+    border-radius: 10px;
+    padding: 14px;
+  }
+  tbody tr {
+    border-bottom: 5px solid #000000; 
+}
+}
+
+header {
+  text-align: center;
+  background-color: #48BBA2;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .Logo {
+    font-family: "Lobster", sans-serif;
+    font-weight: 50;
+    font-style: normal;
+    text-align: left;
+    font-size: 42px;
+    font-weight:100;
+    color: black;
+    align-items: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+thead{
+  background-color: #48bba252;
+}
+
+.table-styled th, .table-styled td {
+  padding: 15px 30px;
+  text-align: center;
+  border-bottom: 2px solid #48BBA2;
+  color: #333;
+}
+
+
+.table-styled td {
+  font-size: 16px;
+}
+.b-update:hover {
+  background-color: #3a9b87;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.Activar:hover{
+background-color: #00000012;
+border-radius: 50px;
+padding: 14px;
+}
